@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIZZLE & STACK | Artisanal Smash Burgers & Craft Shakes</title>
+  <meta name="description" content="Award-winning artisanal smash burgers, ultra-crispy hand-cut fries, and handcrafted thick shakes. Order online for pickup or delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container announcement-inner">
+      <span class="promo-tag">🔥 TRUFFLE WEEK</span>
+      <p class="promo-text">Use code <strong>BURGERLOVE</strong> for 15% OFF your entire first order! Free delivery on orders over $35.</p>
+      <a href="#menu" class="announcement-link">Order Now &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 11a8 8 0 0 1 16 0H4z" fill="#ff541e" stroke="#ff541e"/>
+            <rect x="3" y="13" width="18" height="3" rx="1.5" fill="#fca311" stroke="#fca311"/>
+            <path d="M4 18h16a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z" fill="#ff541e" stroke="#ff541e"/>
+            <circle cx="8" cy="8.5" r="0.75" fill="#fff"/>
+            <circle cx="12" cy="7.5" r="0.75" fill="#fff"/>
+            <circle cx="16" cy="8.5" r="0.75" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">SIZZLE<span class="brand-accent">&amp;</span>STACK</span>
+          <span class="brand-sub">BURGER CO.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#builder" class="nav-link special-link">
+          <span class="badge-sparkle">✨ NEW</span> Build-A-Burger
+        </a>
+        <a href="#deals" class="nav-link">Deals</a>
+        <a href="#story" class="nav-link">Our Craft</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#locations" class="nav-link">Locations</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button class="btn btn-secondary reserve-btn" id="openReserveBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Table</span>
+        </button>
+
+        <button class="cart-trigger-btn" id="openCartBtn" aria-label="Open Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+    <div class="mobile-menu-links">
+      <a href="#menu" class="mobile-link">Menu</a>
+      <a href="#builder" class="mobile-link">Build-A-Burger Lab</a>
+      <a href="#deals" class="mobile-link">Deals &amp; Combos</a>
+      <a href="#story" class="mobile-link">Our Story</a>
+      <a href="#reviews" class="mobile-link">Customer Reviews</a>
+      <a href="#locations" class="mobile-link">Locations &amp; Hours</a>
+      <button class="btn btn-primary w-full mt-4" id="mobileReserveBtn">Reserve a Table</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Voted #1 Smash Burger in the City &bull; 2026</span>
+          </div>
+          <h1 class="hero-title">
+            Smash Searing.<br>
+            <span class="gradient-text">Unapologetic Flavor.</span>
+          </h1>
+          <p class="hero-lead">
+            Double 100% Black Angus patties with ultra-crisp lacy edges, melted aged Wisconsin cheddar, house-pickled cucumbers, and our iconic torch-smoked secret sauce inside a butter-grilled potato brioche.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn btn-primary btn-lg">
+              <span>Order Pickup / Delivery</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#builder" class="btn btn-glass btn-lg">
+              <span class="btn-sparkle">🍔</span>
+              <span>Build Custom Burger</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-val">120K+</span>
+              <span class="metric-label">Burgers Smashed</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val">4.9 ★</span>
+              <span class="metric-label">3,800+ Verified Reviews</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val">15 Min</span>
+              <span class="metric-label">Average Pickup Time</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-showcase">
+            <div class="hero-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" 
+                   alt="Signature Double Smash Cheeseburger with melting cheese and bacon" 
+                   class="hero-img">
+              <div class="hero-floating-badge badge-top-right">
+                <span class="badge-icon">🥩</span>
+                <div class="badge-info">
+                  <strong>100% Angus</strong>
+                  <small>Fresh, never frozen</small>
+                </div>
+              </div>
+              <div class="hero-floating-badge badge-bottom-left">
+                <span class="badge-icon">🧀</span>
+                <div class="badge-info">
+                  <strong>Double Aged Cheddar</strong>
+                  <small>Gooey liquid gold</small>
+                </div>
+              </div>
+            </div>
+            <div class="hero-deal-pill">
+              <div class="deal-pill-avatar">🏆</div>
+              <div class="deal-pill-text">
+                <span class="deal-pill-title">The Royal Smokehouse</span>
+                <span class="deal-pill-sub">Double smash, applewood bacon &amp; chipotle jam &bull; $14.50</span>
+              </div>
+              <button class="deal-pill-add quick-add-hero" data-item-id="royal-smokehouse">+ Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / Feature Badges Strip -->
+    <section class="features-bar">
+      <div class="container features-grid">
+        <div class="feature-badge">
+          <div class="feature-icon">🔥</div>
+          <div class="feature-text">
+            <strong>700°F Hard Smash</strong>
+            <p>Signature crispy Maillard crust</p>
+          </div>
+        </div>
+        <div class="feature-badge">
+          <div class="feature-icon">🥖</div>
+          <div class="feature-text">
+            <strong>Daily Bakery Brioche</strong>
+            <p>Golden butter-toasted buns</p>
+          </div>
+        </div>
+        <div class="feature-badge">
+          <div class="feature-icon">🌱</div>
+          <div class="feature-text">
+            <strong>Local Farm Sourced</strong>
+            <p>Sustainable, ethical &amp; zero hormones</p>
+          </div>
+        </div>
+        <div class="feature-badge">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-text">
+            <strong>Lightning Fast</strong>
+            <p>Piped hot straight to your hands</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Build-Your-Own Burger Section -->
+    <section class="builder-section" id="builder">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">INTERACTIVE LAB</span>
+          <h2 class="section-title">Build Your Dream Burger</h2>
+          <p class="section-subtitle">Customize your masterpiece layer-by-layer. Watch your stack come alive with real-time price &amp; calorie calculation.</p>
+        </div>
+
+        <div class="builder-layout">
+          <!-- Visual Burger Stack Preview -->
+          <div class="builder-preview-col">
+            <div class="builder-stage">
+              <div class="stage-lighting"></div>
+              
+              <!-- Dynamic Stack Container -->
+              <div class="burger-stack-wrapper" id="burgerStackWrapper">
+                <!-- Stack elements generated by JavaScript -->
+              </div>
+
+              <!-- Nutrition & Price HUD -->
+              <div class="builder-hud">
+                <div class="hud-item">
+                  <span class="hud-label">Est. Calories</span>
+                  <span class="hud-value" id="hudCalories">780 kcal</span>
+                </div>
+                <div class="hud-divider"></div>
+                <div class="hud-item">
+                  <span class="hud-label">Protein</span>
+                  <span class="hud-value" id="hudProtein">48g</span>
+                </div>
+                <div class="hud-divider"></div>
+                <div class="hud-item highlight">
+                  <span class="hud-label">Total Price</span>
+                  <span class="hud-value" id="hudPrice">$12.50</span>
+                </div>
+              </div>
+
+              <div class="builder-action-bar">
+                <button class="btn btn-secondary btn-sm" id="resetCustomBurgerBtn">Reset Ingredients</button>
+                <button class="btn btn-primary btn-lg" id="addCustomToCartBtn">
+                  <span>Add Custom Creation to Cart</span>
+                  <span class="btn-price" id="btnCustomPrice">$12.50</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ingredient Selector Controls -->
+          <div class="builder-controls-col">
+            <div class="builder-card">
+              <!-- Custom Burger Name -->
+              <div class="builder-name-input-group">
+                <label for="customBurgerName">Name Your Creation:</label>
+                <input type="text" id="customBurgerName" class="form-input" value="The Ultimate Sizzler" maxlength="32">
+              </div>
+
+              <!-- Step 1: Bun -->
+              <div class="ingredient-category">
+                <div class="category-title">
+                  <span class="step-num">1</span>
+                  <span>Select Bun Base</span>
+                </div>
+                <div class="options-grid" id="bunOptions">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+              <!-- Step 2: Patty Option -->
+              <div class="ingredient-category">
+                <div class="category-title">
+                  <span class="step-num">2</span>
+                  <span>Choose Your Patty</span>
+                </div>
+                <div class="options-grid" id="pattyOptions">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+              <!-- Step 3: Cheeses -->
+              <div class="ingredient-category">
+                <div class="category-title">
+                  <span class="step-num">3</span>
+                  <span>Gooey Cheese Melts</span>
+                </div>
+                <div class="options-grid" id="cheeseOptions">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+              <!-- Step 4: Fresh Toppings -->
+              <div class="ingredient-category">
+                <div class="category-title">
+                  <span class="step-num">4</span>
+                  <span>Gourmet Toppings</span>
+                </div>
+                <div class="options-grid checkbox-grid" id="toppingOptions">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+              <!-- Step 5: Signature Sauces -->
+              <div class="ingredient-category">
+                <div class="category-title">
+                  <span class="step-num">5</span>
+                  <span>House Sauces</span>
+                </div>
+                <div class="options-grid checkbox-grid" id="sauceOptions">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Menu Section -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">CHEF CRAFTED</span>
+          <h2 class="section-title">Explore Our Full Menu</h2>
+          <p class="section-subtitle">Every patty smashed to crispy crust perfection. Made fresh to order with prime ingredients.</p>
+        </div>
+
+        <!-- Search & Filter Bar -->
+        <div class="menu-controls">
+          <!-- Category Tabs -->
+          <div class="category-tabs" id="categoryTabs">
+            <button class="cat-tab active" data-category="all">All Items</button>
+            <button class="cat-tab" data-category="smash">Smashburgers</button>
+            <button class="cat-tab" data-category="chicken-plant">Chicken &amp; Vegan</button>
+            <button class="cat-tab" data-category="sides">Loaded Fries &amp; Sides</button>
+            <button class="cat-tab" data-category="shakes">Thick Shakes &amp; Drinks</button>
+          </div>
+
+          <!-- Search and Dietary Filters -->
+          <div class="menu-filters-row">
+            <div class="search-input-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="menuSearchInput" placeholder="Search burgers, truffle fries, shakes..." class="search-input">
+              <button class="clear-search-btn" id="clearSearchBtn" style="display: none;">&times;</button>
+            </div>
+
+            <div class="dietary-tags-filter">
+              <button class="tag-filter-chip" data-diet="spicy">🌶️ Spicy</button>
+              <button class="tag-filter-chip" data-diet="veg">🌱 Veg / Vegan</button>
+              <button class="tag-filter-chip" data-diet="bestseller">⭐ Best Seller</button>
+              <button class="tag-filter-chip" data-diet="chef">👨‍🍳 Chef's Pick</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Empty Search State -->
+        <div class="empty-menu-state" id="emptyMenuState" style="display: none;">
+          <div class="empty-icon">🔍</div>
+          <h3>No matching items found</h3>
+          <p>Try searching for something else like "truffle", "bacon", or "shake".</p>
+          <button class="btn btn-secondary mt-3" id="resetMenuFilterBtn">View All Items</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly Deals & Combos Section -->
+    <section class="deals-section" id="deals">
+      <div class="container">
+        <div class="deals-banner">
+          <div class="deals-content">
+            <span class="deal-eyebrow">🔥 LIMITED TIME COMBO SPECIAL</span>
+            <h2 class="deal-headline">The Ultimate Smash Feast for Two</h2>
+            <p class="deal-desc">
+              Get 2 Signature Double Smashburgers, 1 Large Truffle Parmesan Crinkle Fries, 2 House Dipping Sauces, and 2 Classic Vanilla or Salted Caramel Malts.
+            </p>
+            <div class="deal-pricing">
+              <span class="deal-current-price">$34.99</span>
+              <span class="deal-original-price">$46.50</span>
+              <span class="deal-save-badge">Save $11.51</span>
+            </div>
+            <div class="deal-actions">
+              <button class="btn btn-primary btn-lg" id="addDealComboBtn">
+                <span>Add Feast Combo to Cart</span>
+              </button>
+              <span class="deal-note">Use code <strong>BURGERLOVE</strong> at checkout for bonus savings</span>
+            </div>
+          </div>
+          <div class="deals-image">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Feast combo with burgers and fries">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Craft & Story -->
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-images-mosaic">
+            <div class="mosaic-main">
+              <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80" alt="Sizzling smash burger on grill">
+            </div>
+            <div class="mosaic-sub">
+              <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=600&q=80" alt="Fresh ingredients and artisanal buns">
+            </div>
+          </div>
+
+          <div class="story-content">
+            <span class="section-tag">OUR OBSESSION</span>
+            <h2 class="section-title">The Alchemy of the Perfect Smash</h2>
+            <p class="story-p">
+              We started SIZZLE &amp; STACK with a single guiding mission: burgers should never be dry, polite, or boring. We believe the true soul of a burger lives in the <em>Maillard reaction</em>—that intensely savory, deeply browned crust forged when prime grass-fed beef meets a scorching 700-degree cast iron surface under heavy custom steel presses.
+            </p>
+
+            <div class="story-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">🥩</div>
+                <div>
+                  <h4>Custom 80/20 Beef Blend</h4>
+                  <p>Coarse ground brisket, short rib, and chuck for unrivaled depth of flavor and juiciness.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🍞</div>
+                <div>
+                  <h4>Golden Butter Brioche</h4>
+                  <p>Baked fresh each morning, pillowy soft with enough backbone to hold every drop of juice.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🍯</div>
+                <div>
+                  <h4>Small-Batch Torch Sauces</h4>
+                  <p>Slow-simmered in-house sauces infused with roasted garlic, smoked chilies, and black truffle.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">VERIFIED CRITICS &amp; FOODIES</span>
+          <h2 class="section-title">What The Burger Lovers Say</h2>
+          <p class="section-subtitle">Over 3,800 five-star reviews across the metro area.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">"The crust on their double smash is genuinely the crunchiest, most flavorful thing I've tasted all year. Do not skip the Truffle Fries!"</p>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" class="reviewer-avatar">
+              <div>
+                <strong>Elena Rostova</strong>
+                <span>Food &amp; Wine Critic, CityEats</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card highlight-card">
+            <div class="review-badge">STAFF PICK</div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">"The interactive custom burger tool is brilliant, but even their standard Royal Smokehouse is unmatched. The bun holds up until the very last bite."</p>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Chen" class="reviewer-avatar">
+              <div>
+                <strong>Marcus Chen</strong>
+                <span>Verified Local Regular &bull; 42 Orders</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">"Ordered for our entire design agency (18 people). Everything arrived piping hot, labels were crystal clear, and the Nashville Hot Chicken blew us away!"</p>
+            <div class="reviewer-info">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Sarah Jenkins" class="reviewer-avatar">
+              <div>
+                <strong>Sarah Jenkins</strong>
+                <span>Creative Director @ StudioPulse</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations & Operating Hours -->
+    <section class="locations-section" id="locations">
+      <div class="container">
+        <div class="locations-layout">
+          <div class="locations-info">
+            <span class="section-tag">FIND US</span>
+            <h2 class="section-title">Visit Our Kitchens</h2>
+            <p class="section-subtitle">Dine-in, pickup at the counter, or order delivery straight to your couch.</p>
+
+            <div class="store-cards">
+              <!-- Location 1 -->
+              <div class="store-card active">
+                <div class="store-status open">
+                  <span class="status-indicator"></span> Open Now &bull; Closes 11:00 PM
+                </div>
+                <h3>Downtown Flagship</h3>
+                <p class="store-address">📍 442 S Grand Ave, Food District, Suite 100</p>
+                <p class="store-phone">📞 (555) 839-2874</p>
+                <div class="store-hours">
+                  <div><strong>Mon – Thu:</strong> 11:00 AM – 10:00 PM</div>
+                  <div><strong>Fri – Sat:</strong> 11:00 AM – Midnight</div>
+                  <div><strong>Sunday:</strong> 11:00 AM – 9:30 PM</div>
+                </div>
+                <div class="store-actions">
+                  <button class="btn btn-sm btn-outline select-location-btn" data-loc="Downtown">Select as My Store</button>
+                  <a href="https://maps.google.com" target="_blank" rel="noopener" class="link-directions">Get Directions &nearr;</a>
+                </div>
+              </div>
+
+              <!-- Location 2 -->
+              <div class="store-card">
+                <div class="store-status open">
+                  <span class="status-indicator"></span> Open Now &bull; Closes 10:30 PM
+                </div>
+                <h3>Westside Tap &amp; Grill</h3>
+                <p class="store-address">📍 1890 Ocean Boulevard, Marina Walk</p>
+                <p class="store-phone">📞 (555) 712-4091</p>
+                <div class="store-hours">
+                  <div><strong>Mon – Sun:</strong> 11:30 AM – 10:30 PM</div>
+                </div>
+                <div class="store-actions">
+                  <button class="btn btn-sm btn-outline select-location-btn" data-loc="Westside">Select as My Store</button>
+                  <a href="https://maps.google.com" target="_blank" rel="noopener" class="link-directions">Get Directions &nearr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Table Reservation Form -->
+          <div class="reservation-box" id="reserveBox">
+            <div class="reservation-box-inner">
+              <span class="reserve-eyebrow">SKIP THE WAIT</span>
+              <h3>Book a Table</h3>
+              <p>Reserve your spot at our lively grill counter or cozy booth.</p>
+
+              <form id="tableReservationForm" class="reserve-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="resName">Your Full Name</label>
+                    <input type="text" id="resName" class="form-input" placeholder="e.g. Alex Morgan" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="resPhone">Phone Number</label>
+                    <input type="tel" id="resPhone" class="form-input" placeholder="(555) 000-0000" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="resLocation">Location</label>
+                    <select id="resLocation" class="form-input">
+                      <option value="Downtown">Downtown Flagship</option>
+                      <option value="Westside">Westside Tap &amp; Grill</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="resGuests">Guests</label>
+                    <select id="resGuests" class="form-input">
+                      <option value="2">2 Guests (Table)</option>
+                      <option value="3">3 Guests</option>
+                      <option value="4" selected>4 Guests (Booth)</option>
+                      <option value="6">6 Guests (Party)</option>
+                      <option value="8">8+ Guests (Call Us)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="resDate">Date</label>
+                    <input type="date" id="resDate" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="resTime">Time</label>
+                    <select id="resTime" class="form-input">
+                      <option value="12:00 PM">12:00 PM (Lunch)</option>
+                      <option value="1:30 PM">1:30 PM</option>
+                      <option value="6:00 PM" selected>6:00 PM (Dinner)</option>
+                      <option value="7:30 PM">7:30 PM</option>
+                      <option value="9:00 PM">9:00 PM (Late Night)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="resNotes">Special Requests (Optional)</label>
+                  <input type="text" id="resNotes" class="form-input" placeholder="Birthday, high chair, patio seating...">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full btn-lg">
+                  Confirm Table Reservation
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">GOT QUESTIONS?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What makes a "smash burger" different from a standard burger?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Unlike thick, gently shaped pub patties, our fresh Angus beef is placed as a chilled ball on an ultra-hot 700°F polished flat top and pressed paper-thin with custom stainless steel smashers. This maximizes contact area, creating an irresistible caramelized lace crust (the Maillard reaction) while sealing intense natural beef juices inside.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you offer gluten-free and vegan alternatives?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We offer artisan gluten-free brioche buns baked in a certified GF facility, crisp butter lettuce wraps, and our famous savory Plant-Craft Beyond smash patties. All our fries are prepared in dedicated peanut-free, gluten-free fryers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How fast is delivery and how does the food stay hot and crispy?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our average delivery time is under 28 minutes. We use custom micro-vented insulated packaging that allows steam to escape so buns and fries never get soggy, keeping everything crisp and hot.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I customize every single topping and sauce?</span>
+              <span class="faq-chevron">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely! Use our interactive <a href="#builder" class="text-accent">Build-A-Burger Lab</a> above or click the "Customize" button on any menu item to swap buns, add extra cheese melts, or pick your favorite house sauces.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <div class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 11a8 8 0 0 1 16 0H4z" fill="#ff541e" stroke="#ff541e"/>
+              <rect x="3" y="13" width="18" height="3" rx="1.5" fill="#fca311" stroke="#fca311"/>
+              <path d="M4 18h16a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z" fill="#ff541e" stroke="#ff541e"/>
+            </svg>
+          </div>
+          <span class="brand-title">SIZZLE<span class="brand-accent">&amp;</span>STACK</span>
+        </div>
+        <p class="footer-desc">
+          Crafting the city's crispest smash burgers, golden crinkle fries, and velvety hand-spun shakes since 2021.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram" class="social-icon">📸</a>
+          <a href="#" aria-label="TikTok" class="social-icon">🎵</a>
+          <a href="#" aria-label="Twitter" class="social-icon">🐦</a>
+          <a href="#" aria-label="YouTube" class="social-icon">▶️</a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Menu &amp; Food</h4>
+        <ul>
+          <li><a href="#menu">Signature Burgers</a></li>
+          <li><a href="#menu">Loaded Fries &amp; Sides</a></li>
+          <li><a href="#menu">Craft Shakes</a></li>
+          <li><a href="#builder">Build-A-Burger Lab</a></li>
+          <li><a href="#deals">Combos &amp; Offers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Our Brand</h4>
+        <ul>
+          <li><a href="#story">Our Searing Method</a></li>
+          <li><a href="#reviews">Guest Reviews</a></li>
+          <li><a href="#locations">Store Locations</a></li>
+          <li><a href="#reserveBox">Table Booking</a></li>
+          <li><a href="#">Catering &amp; Events</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter-col">
+        <h4>Get $5 Off Your First Order</h4>
+        <p>Subscribe for exclusive weekly drops, secret menu codes, and free birthday shakes.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required class="form-input">
+          <button type="submit" class="btn btn-primary">Join Club</button>
+        </form>
+        <small class="newsletter-disclaimer">Zero spam. Unsubscribe with 1-click anytime.</small>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Sizzle &amp; Stack Burger Co. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="#">Nutrition &amp; Allergen Guide</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <div class="cart-title-row">
+        <h3>Your Hungry Bag</h3>
+        <span class="cart-badge-items" id="cartDrawerCount">0 items</span>
+      </div>
+      <button class="cart-close-btn" id="closeCartBtn" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Fulfillment Type Switcher -->
+    <div class="fulfillment-switch">
+      <button class="fulfillment-btn active" data-type="delivery">
+        <span>🛵 Delivery</span>
+        <small>~25-35 min</small>
+      </button>
+      <button class="fulfillment-btn" data-type="pickup">
+        <span>🛍️ Pickup</span>
+        <small>~15 min ready</small>
+      </button>
+    </div>
+
+    <!-- Cart Items Scroll Area -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <!-- Empty Cart Template -->
+    <div class="empty-cart-view" id="emptyCartView">
+      <div class="empty-cart-icon">🍔</div>
+      <h4>Your bag is feeling empty</h4>
+      <p>Smash your cravings! Add a burger, loaded crinkle fries, or a salted caramel shake.</p>
+      <button class="btn btn-primary mt-3" id="startBrowsingBtn">Explore The Menu</button>
+    </div>
+
+    <!-- Cart Summary & Checkout Footer -->
+    <div class="cart-footer" id="cartFooter">
+      <!-- Promo Code Field -->
+      <div class="cart-promo-group">
+        <input type="text" id="promoCodeInput" placeholder="Promo code (e.g. BURGERLOVE)" class="promo-input">
+        <button class="btn btn-secondary btn-sm" id="applyPromoBtn">Apply</button>
+      </div>
+      <div class="promo-feedback" id="promoFeedback"></div>
+
+      <!-- Tip Selector -->
+      <div class="tip-section">
+        <span class="tip-label">Kitchen &amp; Courier Tip:</span>
+        <div class="tip-options" id="tipOptions">
+          <button class="tip-btn" data-tip="0.10">10%</button>
+          <button class="tip-btn active" data-tip="0.15">15%</button>
+          <button class="tip-btn" data-tip="0.20">20%</button>
+          <button class="tip-btn" data-tip="0">Custom</button>
+        </div>
+      </div>
+
+      <!-- Financial Calculation Breakdown -->
+      <div class="cart-totals">
+        <div class="calc-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="calc-row" id="discountRow" style="display: none;">
+          <span class="discount-label">Discount</span>
+          <span id="cartDiscount" class="discount-val">-$0.00</span>
+        </div>
+        <div class="calc-row">
+          <span>Taxes &amp; Fees</span>
+          <span id="cartTaxes">$0.00</span>
+        </div>
+        <div class="calc-row" id="deliveryFeeRow">
+          <span>Estimated Delivery</span>
+          <span id="cartDelivery">$3.99</span>
+        </div>
+        <div class="calc-row">
+          <span>Tip</span>
+          <span id="cartTip">$0.00</span>
+        </div>
+        <div class="calc-row total-row">
+          <span>Estimated Total</span>
+          <span id="cartFinalTotal">$0.00</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary w-full btn-lg checkout-btn" id="proceedCheckoutBtn">
+        <span>Proceed to Checkout</span>
+        <span id="checkoutTotalBtn">$0.00</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Item Customizer / Detail Modal -->
+  <div class="modal-backdrop" id="customizerModalBackdrop">
+    <div class="modal-window customizer-modal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="closeCustomizerModalBtn">&times;</button>
+      <div class="customizer-modal-content" id="customizerModalContent">
+        <!-- Filled dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal-backdrop" id="reservationModalBackdrop">
+    <div class="modal-window reservation-modal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="closeReservationModalBtn">&times;</button>
+      <div class="modal-success-icon">🎉</div>
+      <h3>Table Reserved Successfully!</h3>
+      <p class="modal-subtext">We've saved a prime table for you at SIZZLE &amp; STACK.</p>
+      
+      <div class="reservation-summary-card" id="reservationDetailsSummary">
+        <!-- Injected via JS -->
+      </div>
+
+      <p class="reservation-reminder">A confirmation SMS and calendar invite have been sent to your phone. We hold tables for up to 15 minutes past reservation time.</p>
+      <button class="btn btn-primary w-full mt-4" id="okReservationBtn">Got it, See You There!</button>
+    </div>
+  </div>
+
+  <!-- Checkout / Order Placed Simulated Modal -->
+  <div class="modal-backdrop" id="checkoutModalBackdrop">
+    <div class="modal-window checkout-success-modal" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" id="closeCheckoutModalBtn">&times;</button>
+      <div class="success-glow-ring">
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#22c55e" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <span class="order-id-badge" id="orderConfirmationId">ORDER #SS-9821</span>
+      <h2>Grill Fired Up!</h2>
+      <p class="modal-subtext">Your order has been received and our pitmasters are already searing your patties.</p>
+
+      <!-- Live Order Progress Tracker -->
+      <div class="order-tracker">
+        <div class="tracker-steps">
+          <div class="tracker-step active" id="trackStep1">
+            <div class="step-circle">1</div>
+            <span>Order Placed</span>
+          </div>
+          <div class="tracker-bar active"></div>
+          <div class="tracker-step active" id="trackStep2">
+            <div class="step-circle">2</div>
+            <span>Sizzling on Grill</span>
+          </div>
+          <div class="tracker-bar"></div>
+          <div class="tracker-step" id="trackStep3">
+            <div class="step-circle">3</div>
+            <span>Quality Check</span>
+          </div>
+          <div class="tracker-bar"></div>
+          <div class="tracker-step" id="trackStep4">
+            <div class="step-circle">4</div>
+            <span>On Its Way</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-quick-receipt" id="orderReceiptBreakdown">
+        <!-- Filled dynamically -->
+      </div>
+
+      <div class="modal-cta-row">
+        <button class="btn btn-secondary" id="trackLiveMapBtn">Simulate Courier GPS</button>
+        <button class="btn btn-primary" id="doneCheckoutBtn">Back to Home</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
